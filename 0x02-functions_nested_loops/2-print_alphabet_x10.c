@@ -1,10 +1,11 @@
+#include <unistd.h>
 #include "main.h"
-
 /**
  * print_alphabet_x10 - prints the alphabet 10 times
  *
  * Return: void
  */
+
 void	print_alphabet_x10(void)
 {
 	char	i;
@@ -17,10 +18,10 @@ void	print_alphabet_x10(void)
 		i = 'a';
 		while (i <= 'z')
 		{
-			_putchar(c);
+			putchar(i);
 			i++;
 		}
-		_putchar('\n');
+		putchar('\n');
 		c++;
 	}
 }
