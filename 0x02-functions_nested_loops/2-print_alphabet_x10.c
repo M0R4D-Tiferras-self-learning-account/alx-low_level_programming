@@ -1,7 +1,7 @@
-#include "main.c"
+#include "main.h"
 
 /**
- * 2-print_alphabet_x10.c - a function that prints 10 time
+ * print_alphabet_x10.c - a function that prints 10 time
  *
  * return - void
  */
