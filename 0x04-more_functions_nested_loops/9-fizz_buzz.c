@@ -38,8 +38,6 @@ void	printnbr(int n)
 int	main(void)
 {
 	int	i;
-	int	t;
-	int	o;
 
 	i = 1;
 	while (i <= 100)
