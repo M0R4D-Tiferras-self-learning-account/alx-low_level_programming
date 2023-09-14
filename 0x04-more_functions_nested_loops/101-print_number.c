@@ -1,16 +1,18 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
  * print_number - prints the numbers manupulating th ascii
+ *
+ * @n: the number that will be printed
  *
  * Return: void
 */
 
 void	print_number(int n)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
-		_putchar(i + '0');
-	_putchar('\n');
+	if (n >= 10)
+		print_number(n / 10);
+	n = (n % 10 + '0');
+	write(1, &n, 1);
 }
