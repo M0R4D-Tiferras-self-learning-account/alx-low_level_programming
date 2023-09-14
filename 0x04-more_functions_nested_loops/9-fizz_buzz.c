@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * _putchar - a printing function
@@ -15,6 +16,7 @@ void	_putchar(char c)
 
 /**
  * printnbr - function to print numbers traversing the base 10
+ * i wanna challange my self witout using the standard library
  *
  * @n: an int will be handled
  *
