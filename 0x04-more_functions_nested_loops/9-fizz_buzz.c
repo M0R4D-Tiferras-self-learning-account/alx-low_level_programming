@@ -1,35 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
-
-/**
- * _putchar - a printing function
- *
- * @c: a charachter will be handled
- *
- * Return: void
-*/
-
-void	_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-/**
- * printnbr - function to print numbers traversing the base 10
- * i wanna challange my self witout using the standard library
- *
- * @n: an int will be handled
- *
- * Return: Void
-*/
-
-void	printnbr(int n)
-{
-	if (n >= 10)
-		printnbr(n / 10);
-	n = (n % 10 + '0');
-	write(1, &n, 1);
-}
 
 /**
  * main - FizzBuzz challenge
@@ -37,30 +6,17 @@ void	printnbr(int n)
  * Return: Always"0" (success)
 */
 
-int	main(void)
+int main(void)
 {
-	int	i;
+	int i;
 
-	i = 1;
-	while (i <= 100)
+	for (i = 1; i <= 100; i++)
 	{
-		if ((i % 3 == 0) && (i % 5 == 0))
-		{
-			write(1, "FizzBuzz", 8);
-		}
-		else if (i % 3 == 0)
-		{
-			write(1, "Fizz", 4);
-		}
-		else if (i % 5 == 0)
-		{
-			write(1, "Buzz", 4);
-		}
-		else
-			printnbr(i);
-
-		_putchar('\n');
-		i++;
+		(i % 3 == 0) ? printf("Fizz") : 0;
+		(i % 5 == 0) ? printf("Buzz") : 0;
+		(i % 3 != 0 && i % 5 != 0) ? printf("%d", i) : 0;
+		(i != 100) ? printf(" ") : 0;
 	}
+	printf("\n");
 	return (0);
 }
