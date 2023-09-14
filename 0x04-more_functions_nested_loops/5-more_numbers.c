@@ -18,6 +18,7 @@ void	more_numbers(void)
 		while (i <= 14 && i >= 0)
 		{
 			_putchar(i + '0');
+			i++;
 		}
 		_putchar('\n');
 		c++;
