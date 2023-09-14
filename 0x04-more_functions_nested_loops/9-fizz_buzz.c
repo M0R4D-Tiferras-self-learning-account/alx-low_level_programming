@@ -12,6 +12,23 @@ void	_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
+/**
+ * printnbr - function to print numbers traversing the base 10
+ *
+ * @n: an int will be handled
+ *
+ * Return: Void
+*/
+
+void	printnbr(int n)
+{
+	if (n >= 10)
+		printnbr(n / 10);
+	n = (n % 10 + '0');
+	write(1, &n, 1);
+}
+
 /**
  * main - FizzBuzz challenge
  *
@@ -39,16 +56,9 @@ int	main(void)
 		{
 			write(1, "Buzz", 4);
 		}
+		else
+			printnbr(i);
 
-		else if ((i > 9 && i < 100) && !(i % 5 == 0) && !(i % 3 == 0))
-		{
-			t = (i / 10) % 10;
-			o = i % 10;
-			_putchar(t + '0');
-			_putchar(o + '0');
-		}
-		else if (i <= 9 && i >= 1)
-			_putchar(i + '0');
 		_putchar('\n');
 		i++;
 	}
