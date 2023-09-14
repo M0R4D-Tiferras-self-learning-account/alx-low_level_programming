@@ -8,10 +8,5 @@
 */
 int	mul(int a, int b)
 {
-	if ((a && b) <= 9 && (a && b) >= 0)
-	{
-		return (a * b);
-	}
-	else
-		return (0);
+	return (a * b);
 }
