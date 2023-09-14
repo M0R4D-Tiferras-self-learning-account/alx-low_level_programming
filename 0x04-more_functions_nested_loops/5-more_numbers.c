@@ -15,11 +15,10 @@ void	more_numbers(void)
 	c = 1;
 	while (c <= 10)
 	{
-		while (i <= 14)
+		for (i = 0; i <= 14; i++)
 		{
 			(i > 9) ? _putchar((i / 10) + '0') : 0;
 			_putchar((i % 10) + '0');
-			i++;
 		}
 		_putchar('\n');
 		c++;
