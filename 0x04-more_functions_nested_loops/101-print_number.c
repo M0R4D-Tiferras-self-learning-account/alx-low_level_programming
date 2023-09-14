@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - prints the numbers manupulating th ascii
+ * print_number - prints the numbers manupulating th ascii
  *
  * Return: void
 */
 
-void	print_numbers(void)
+void	print_number(void)
 {
 	int i;
 
