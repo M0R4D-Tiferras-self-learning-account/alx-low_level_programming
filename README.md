@@ -53,7 +53,7 @@
 ## C Program Compilation
 
 <p align="center">
-  <img src="[geeksforgeeks](https://media.geeksforgeeks.org/wp-content/uploads/20230404112946/Compilation-Process-in-C.png)" />
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230404112946/Compilation-Process-in-C.png" width="392" height="376">
 </p>
 
 The compilation process has four different steps:
