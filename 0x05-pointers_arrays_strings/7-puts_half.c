@@ -19,18 +19,18 @@ void	puts_half(char *str)
 		hlen++;
 	}
 
-	if (len % 2 == 0)
+	if (hlen % 2 == 0)
 	{
-		start = len / 2;
+		start = hlen / 2;
 	}
 	else
 	{
-		start = (len + 1) / 2;
+		start = (hlen + 1) / 2;
 	}
 
-	while (str[hlen] != '\0')
+	while (str[start] != '\0')
 	{
-		write(1, &str[hlen], 1);
+		write(1, &str[start], 1);
 		hlen++;
 	}
 	write(1, "\n", 1);
