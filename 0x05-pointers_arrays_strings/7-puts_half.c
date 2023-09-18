@@ -17,7 +17,16 @@ void	puts_half(char *str)
 	{
 		hlen++;
 	}
-	hlen = hlen / 2;
+
+	if (len % 2 == 0)
+	{
+		start = len / 2;
+	}
+	else
+	{
+		start = (len + 1) / 2;
+	}
+
 	while (str[hlen] != '\0')
 	{
 		write(1, &str[hlen], 1);
