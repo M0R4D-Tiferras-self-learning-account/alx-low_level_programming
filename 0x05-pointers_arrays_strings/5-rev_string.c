@@ -12,6 +12,7 @@ void	rev_string(char *s)
 {
 	int	start;
 	int	end;
+	char    temp;
 
 	start = 0;
 	end = 0;
@@ -21,7 +22,6 @@ void	rev_string(char *s)
 		end++;
 	}
 	end = end - 1;
-	char    temp;
 
 	while (end > start)
 	{
