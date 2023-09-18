@@ -11,6 +11,7 @@
 void	puts_half(char *str)
 {
 	int	hlen;
+
 	hlen = 0;
 	while (str[hlen] != '\0')
 	{
@@ -23,13 +24,4 @@ void	puts_half(char *str)
 		hlen++;
 	}
 	write(1, "\n", 1);
-}
-
-int main(void)
-{
-    char *str;
-
-    str = "0123456789";
-    puts_half(str);
-    return (0);
 }
