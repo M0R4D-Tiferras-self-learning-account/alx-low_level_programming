@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.>
 
 /**
  * puts_half - printing the half of a string
@@ -31,7 +32,7 @@ void	puts_half(char *str)
 	while (str[start] != '\0')
 	{
 		write(1, &str[start], 1);
-		hlen++;
+		start++;
 	}
 	write(1, "\n", 1);
 }
