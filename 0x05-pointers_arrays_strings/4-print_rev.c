@@ -1,24 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-/**
- * _strlen - calculate the length of a string
- *
- * @s: a string will be handled
- *
- * Return: The length of the string
-*/
 
-int	_strlen(char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
 
 /**
  * print_rev - printing str in reverse order
@@ -30,13 +12,12 @@ int	_strlen(char *s)
 
 void	print_rev(char *s)
 {
-	int	rev;
+	int i = 0;
 
-	rev = _strlen(s);
-	while (s[rev] >= 0)
-	{
-		write(1, &s[rev], 1);
-		rev--;
-	}
-	write(1, "\n", 1);
+	while (s[i] != '\0')
+		i++;
+
+	while (i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }
