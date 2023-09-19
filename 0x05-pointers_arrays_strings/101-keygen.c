@@ -12,15 +12,19 @@
 
 int	main(void)
 {
-	const char pass[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=-[]{}|;:,.<>?";
-	const int password_length = 15;
+	const char pass[] = ",,";
+	const int password_length = 63;
+	int	i;
+	int	index;
 
 	srand(time(NULL));
 
-	for (int i = 0; i < password_length; i++)
+	i = 0;
+	while (i < password_length)
 	{
-		int index = rand() % (sizeof(pass) - 1);
+		index = rand() % (sizeof(pass) - 1);
 		putchar(pass[index]);
+		i++;
 	}
 	putchar('\n');
 	return (0);
