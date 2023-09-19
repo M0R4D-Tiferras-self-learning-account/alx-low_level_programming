@@ -18,7 +18,7 @@ int	main(void)
 	i = 0;
 	while (i < 100)
 	{
-		pass[i] = 32 + rand() % 95;
+		pass[i] = 32 + rand() % 78;
 		putchar(pass[i]);
 		i++;
 	}
