@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * _strncat - function that concatenates two strings.
+ * _strncpy - function that concatenates two strings.
  *
  * @dest: a string will be handled
  *
@@ -13,7 +13,7 @@
  * Return: a charachter
 */
 
-char	*_strncat(char *dest, char *src, int n)
+char	*_strncpy(char *dest, char *src, int n)
 {
 	int	i;
 	int	j;
