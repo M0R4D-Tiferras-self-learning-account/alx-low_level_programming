@@ -26,8 +26,7 @@ char	*leet(char *s)
 			s[i] = '7';
 		else if (s[i] == 'l' || s[i] == 'L')
 			s[i] = '1';
-		else
-			i++;
+		i++;
 	}
 
 	return (s);
