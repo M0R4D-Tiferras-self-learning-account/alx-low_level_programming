@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -23,12 +23,16 @@ char	*_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while ((dest[i] && src[j]) != '\0')
+	while (src[j] != '\0')
 	{
-		dest[i - 1] = src[j];
+		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	while (dest[i] != '\0')
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
