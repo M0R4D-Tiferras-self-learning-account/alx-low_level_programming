@@ -21,8 +21,11 @@ char	*cap_string(char *s)
 			c == '!' || c == '?' || c == '"' ||
 			c == '(' || c == ')' || c == '{' ||
 			c == '}')
-			s[i + 1] = s[i + 1] - 32;
-		i++;
+			i++;
+		else if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+		else
+			i++;
 	}
 	return (s);
 }
