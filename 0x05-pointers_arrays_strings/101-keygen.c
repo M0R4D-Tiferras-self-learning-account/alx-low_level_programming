@@ -12,7 +12,7 @@
 
 int	main(void)
 {
-	const char pass[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	const char pass[] = ",";
 	const int password_length = 63;
 	int	i;
 	int	index;
