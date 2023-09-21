@@ -22,9 +22,7 @@ char	*cap_string(char *s)
 			s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
 			s[i - 1] == '}') && (s[i] >= 'a' && s[i] <= 'z'))
 			s[i] = s[i] - 32;
-			i++;
-		else
-			i++;
+		i++;
 	}
 
 	return (s);
