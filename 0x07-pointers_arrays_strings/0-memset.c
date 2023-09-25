@@ -7,7 +7,7 @@
  *
  * @s: a char will be handled
  *
- * @s: a char will be handled
+ * @b: a char will be handled
  *
  * Return: a char s
 */
