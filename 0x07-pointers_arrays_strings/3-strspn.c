@@ -13,28 +13,20 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-	int found;
+	unsigned int c = 0;
+	char *t = accept;
 
-	while (*s)
+	while (*s++)
 	{
-		found = 0;
-		for (char *a = accept; *a; a++)
-		{
-			if (*s == *a)
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
 			{
-				found = 1;
+				c++;
 				break;
 			}
-		}
-		if (found)
-		{
-			count++;
-			s++;
-		}
-		else
+		if (!(*--accept))
 			break;
+		accept = t;
 	}
-
-	return (count);
+	return (c);
 }
