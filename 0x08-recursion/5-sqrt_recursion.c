@@ -1,6 +1,26 @@
 #include "main.h"
 
 /**
+ * _sqrt_helper - helper function for _sqrt
+ *
+ * @n: number
+ *
+ * @i: incrementer
+ *
+ * Return: natural square root
+*/
+
+int	_sqrt_helper(int n, int i)
+{
+	if (i * i == n)
+		return (i);
+	if (i * i > n)
+		return (-1);
+	return (_sqrt_helper(n, i + 1));
+}
+
+
+/**
  * _sqrt_recursion - funcution make the sqrt
  *
  * @n: an int will be handled
@@ -11,29 +31,7 @@
 
 int	_sqrt_recursion(int n)
 {
-	long	index;
-	long	b;
-
-	b = n;
-	if (b <= 0)
-	{
-		return (0);
-	}
-	if (b == 1)
-	{
-		return (1);
-	}
-	index = 2;
-	if (b >= 2)
-	{
-		while (index * index <= b)
-		{
-			if (index * index == b)
-			{
-				return (index);
-			}
-			index++;
-		}
-	}
-	return (0);
+	if (n < 0)
+		return (-1);
+	return (_sqrt_helper(n, 0));
 }
