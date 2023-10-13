@@ -4,11 +4,11 @@
 /**
  * main - a program that prints the opcodes of its own main function
  *
- * @argc: argument counter.
+ * @argc: arg counter.
  *
- * @argv: argument vector.
+ * @argv: arg vector.
  *
- * Return: the opcodes
+ * Return: 0 success
 */
 
 int	main(int argc, char **argv)
