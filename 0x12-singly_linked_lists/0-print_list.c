@@ -3,7 +3,7 @@
 
 /**
  * print_list - function that prints all the elements of a list_t list.
- * 
+ *
  * @h: pointing list_t
  *
  * Return: size of nodes
