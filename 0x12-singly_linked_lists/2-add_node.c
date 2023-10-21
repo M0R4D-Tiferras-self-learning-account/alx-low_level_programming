@@ -12,22 +12,24 @@
   * Return: new list or NULL
 */
 
-list_t *add_node(list_t **head, const char *str)
+list_t	*add_node(list_t **head, const char *str)
 {
-	list_t *new_node_ptr = malloc(sizeof(list_t));
+	char *strCopy = strdup(str);
+	list_t *new;
+	unsigned int len;
 
-	new_head = malloc(sizeof(list_t));
-
-	if (new_head == NULL)
-	{
+	if (!strCopy || !head)
 		return (NULL);
-	}
-	else
+
+	new = malloc(sizeof(list_t));
+	len = 0;
+	while (str[len] != '\0')
 	{
-		new_head->str = strdup(str);
-		new_head->len = length;
-		new_head->next = *head;
-		*head = new;
-		return (new_head);
+		len++;
 	}
+	new->str = strCopy;
+	new->len = len;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
