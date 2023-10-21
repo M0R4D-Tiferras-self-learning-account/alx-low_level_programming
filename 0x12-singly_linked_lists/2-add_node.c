@@ -11,21 +11,23 @@
   *
   * Return: new list or NULL
 */
+
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
-	int length = 0;
+	list_t *new_node_ptr = malloc(sizeof(list_t));
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
+	new_head = malloc(sizeof(list_t));
+
+	if (new_head == NULL)
+	{
 		return (NULL);
-
-	while (str[length])
-		length++;
-
-	temp->len = length;
-	temp->str = strdup(str);
-	temp->next = *head;
-	*head = temp;
-	return (temp);
+	}
+	else
+	{
+		new_head->str = strdup(str);
+		new_head->len = length;
+		new_head->next = *head;
+		*head = new;
+		return (new_head);
+	}
 }
